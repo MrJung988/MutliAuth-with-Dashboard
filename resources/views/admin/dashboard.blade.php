@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title','HomePage')
+@section('title','Dashboard')
 @section('content') 
 
 <!-- Content Wrapper. Contains page content -->
