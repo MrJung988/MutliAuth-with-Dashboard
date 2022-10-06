@@ -34,7 +34,7 @@ class UserController extends Controller
             'lastname' => 'required',
             'gender' => 'required',
             'dob' => 'required',
-            'email' => 'required | unique:users | email',
+            'email' => 'required|unique:users|email',
             'password' => 'required|min:6',
             'confirmPassword' => 'required|same:password|min:6',
         ]);
@@ -55,8 +55,8 @@ class UserController extends Controller
     public function loginUser(Request $request){
         // dd($request->all());
         $attributes = $request->validate([
-            'email' => 'required | email',
-            'password' => 'required |  min:6'
+            'email' => 'required|email',
+            'password' => 'required|min:6'
         ]);
 
         if (Auth::attempt($attributes)) {
